@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MP3 Master">
+    <output-path>$PROJECT_DIR$/out/artifacts/MP3_Master</output-path>
+    <root id="archive" name="MP3 Master.jar">
+      <element id="module-output" name="MP3 Master" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
