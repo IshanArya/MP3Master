@@ -53,14 +53,20 @@ public class App extends Application {
 		input = new TextField();
 			input.setPromptText("song info");
 			input.setOnKeyPressed(e -> {
-				if(e.getCode().equals(KeyCode.ENTER))
-					BackgroundWork.searchAction(input, URL);
+				if(!input.getText().equals("")){
+					if(e.getCode().equals(KeyCode.ENTER))
+						BackgroundWork.searchAction(input, URL);
+				}
 			});
 		
 		//Takes input from TextField and attempts to download song
 		Button button = new Button();
 			button.setText("Get song!");
-			button.setOnAction(e -> BackgroundWork.searchAction(input, URL));
+			button.setOnAction(e -> {
+				if(!input.getText().equals("")){
+					BackgroundWork.searchAction(input, URL);
+				}
+			});
 		
 		//Searchbar
 		HBox searchBar = new HBox(10);

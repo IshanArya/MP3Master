@@ -66,12 +66,11 @@ public class BackgroundWork {
 		String fileName = null;
 		try {
 			fileName = input.getText();
+			input.clear();
 			System.out.println("Fetching url...");
 			URL = FetchURL.fetchFinalURL(fileName);
 		} catch (IOException er) {
 			System.err.println("ERROR: Unable to access website to fetch FCKH and URL; website may be down...");
-		} finally {
-			input.clear();
 		}
 		finalActivity(fileName, URL);
 	}
