@@ -19,11 +19,11 @@ public class FetchSong {
 	/*
 	fetch best song order by comparing kbps (later plan to compare time with Spotify API)
 	 */
-	public static Elements fetchBestSongOrder(Document doc){
+	public static Elements fetchBestSongOrder(Document doc, String fileName){
 		
 		//extract songs
 		Elements songs = doc.select("div#song_html");
-		SortElements.mergeSort(songs);
+		SortElements.mergeSort(songs, fileName);
 		return songs;
 		
 		

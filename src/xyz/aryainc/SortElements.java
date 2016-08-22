@@ -11,12 +11,26 @@ public class SortElements {
 	/*
 	Will sort Elements list into order by kbps; Will also get rid of the ad-boxes
 	 */
-	public static void mergeSort(Elements list){
-		//System.out.println(list.size());
-		for(int i = 0; i < list.size(); i++){
-			if(list.get(i).attr("class").contains("song"))
-				list.remove(i);
+	public static void mergeSort(Elements list, String fileName){
+		
+		if(fileName.contains("remix") || fileName.contains("cover") || fileName.contains("instrumental")){
+			for(int i = 0; i < list.size(); i++){
+				if(list.get(i).attr("class").contains("song"))
+					list.remove(i);
+			}
+		} else{
+			//System.out.println(list.size());
+			for(int i = 0; i < list.size(); i++){
+				if(list.get(i).attr("class").contains("song")){
+					list.remove(i);
+				}
+				//Remove file if name contains "remix" or "cover"
+				else if(parseTitle(list.get(i)).contains("remix") || parseTitle(list.get(i)).contains("cover") || parseTitle(list.get(i)).contains("instrumental")){
+					list.remove(i);
+				}
+			}
 		}
+		
 		//System.out.println(list.size());
 		mergeSortHelper(list, 0, list.size() - 1, new Element[list.size()]);
 	}
@@ -73,6 +87,9 @@ public class SortElements {
 		//System.out.println("KBPS: " + Integer.parseInt(info.substring(0, info.indexOf("k") - 1).trim()));
 		return Integer.parseInt(info.substring(0, info.indexOf("k") - 1).trim());
 		
-		
+	}
+	
+	public static String parseTitle(Element element){
+		return element.select("div.mp3_title").select("b").first().text().trim();
 	}
 }

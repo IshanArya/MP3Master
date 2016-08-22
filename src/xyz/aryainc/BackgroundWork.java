@@ -38,7 +38,7 @@ public class BackgroundWork {
 		
 		//Will go through each element trying to download song.
 		System.out.println("Organizing songs in best order...");
-		Elements songs = FetchSong.fetchBestSongOrder(doc);
+		Elements songs = FetchSong.fetchBestSongOrder(doc, fileName);
 		System.out.println("Organized songs...");
 		for(Element x : songs){
 			
