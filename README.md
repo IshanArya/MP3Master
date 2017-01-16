@@ -1,5 +1,5 @@
 # MP3Master
-Simple program that parses mp3skull website and downloads songs to computer.
+Simple program that parses mp3skull website and downloads songs to computer. Also works to fix id3 info on downloaded songs
 
 ## How to Operate
 Just run jar file, put in some search you want to do, click "enter" or the button.
@@ -7,7 +7,6 @@ Just run jar file, put in some search you want to do, click "enter" or the butto
 
 ## Stuff to Add
 * Spotify support for more accurate results and easier music retrieval
-* ID3 fixing
 
 ## Disclaimers
 * I do not host any of the files that you may download. All my program does is access mp3skull's website and retrieve the download links. Imagine this as a browser just for mp3skull
