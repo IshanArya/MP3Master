@@ -10,4 +10,4 @@ Just run jar file, put in some search you want to do, click "enter" or the butto
 
 ## Disclaimers
 * I do not host any of the files that you may download. All my program does is access mp3skull's website and retrieve the download links. Imagine this as a browser just for mp3skull
-* Don't use this ( ͡° ͜ʖ ͡°)
+* Don't do drugs ( ͡° ͜ʖ ͡°)
